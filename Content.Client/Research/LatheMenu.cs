@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using Content.Client.GameObjects.Components.Research;
 using Content.Shared.Materials;
 using Content.Shared.Research;
@@ -162,11 +162,11 @@ namespace Content.Client.Research
         {
             Materials.Clear();
 
-            foreach (var (id, amount) in Owner.Storage)
+            foreach (var ab in Owner.Storage)
             {
-                if (!PrototypeManager.TryIndex(id, out MaterialPrototype materialPrototype)) continue;
+                if (!PrototypeManager.TryIndex(ab.Key, out MaterialPrototype materialPrototype)) continue;
                 var material = materialPrototype.Material;
-                Materials.AddItem($"{material.Name} {amount} cm³", material.Icon.Frame0(), false);
+                Materials.AddItem($"{material.Name} {ab.Value} cm³", material.Icon.Frame0(), false);
             }
         }
 

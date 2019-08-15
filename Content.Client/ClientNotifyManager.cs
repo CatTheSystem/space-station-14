@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using Content.Client.Interfaces;
 using Content.Shared;
@@ -92,7 +92,7 @@ namespace Content.Client
                 FontColorShadowOverride = Color.Black;
             }
 
-            public void Update(FrameEventArgs eventArgs)
+            public new void Update(FrameEventArgs eventArgs)
             {
                 _timeLeft += eventArgs.DeltaSeconds;
                 Position = InitialPos - new Vector2(0, 20 * (_timeLeft * _timeLeft + _timeLeft));

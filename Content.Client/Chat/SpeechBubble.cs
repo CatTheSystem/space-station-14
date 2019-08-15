@@ -1,4 +1,4 @@
-using Content.Client.Interfaces.Chat;
+﻿using Content.Client.Interfaces.Chat;
 using Robust.Client.Interfaces.Graphics.ClientEye;
 using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
@@ -67,7 +67,7 @@ namespace Content.Client.Chat
 
             AddChild(_panel);
 
-            ForceRunStyleUpdate();
+            //ForceRunStyleUpdate();
 
             _panel.Size = _panel.CombinedMinimumSize;
             ContentHeight = _panel.Height;
